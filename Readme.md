@@ -56,22 +56,43 @@ This project follows the **"Limited Perspective"** theme from the assignment bri
 ## Project Structure
 
 ```
-Assets/
-├── Scripts/
-│   ├── ManualSteeringAvoidance.cs    # Main car movement and collision logic
-│   └── CameraFollow.cs               # Camera following system
-├── Materials/
-│   ├── AsphaltMaterial               # Road surface material
-│   └── ObstacleMaterial              # Obstacle material
-├── Models/
-│   ├── RoadModel.fbx                 # Road/track 3D model
-│   └── CarModel.fbx                  # Volkswagen car model
-├── Audio/
-│   ├── EngineSound.wav               # Car engine audio
-│   └── CrashSound.wav                # Collision sound effect
-└── Scenes/
-    └── SampleScene.unity             # Main game scene
+VRCarSimulator/
+├── .vscode/                         # VS Code configuration files
+│   ├── extensions.json
+│   ├── launch.json
+│   └── settings.json
+├── Assets/                          # Main Unity assets folder
+│   ├── Scenes/                      # Unity scene files
+│   │   └── SampleScene.unity        # Main game scene
+│   ├── CameraFollow.cs              # Camera following system script
+│   ├── CarWaypointMovement.cs       # Legacy car movement script
+│   ├── ManualSteeringAvoidance.cs   # Main car movement and collision logic
+│   ├── engine-47745.mp3             # Car engine audio file
+│   ├── AsphaltMaterial.mat          # Road surface material
+│   ├── ObstacleMaterial.mat         # Orange obstacle material
+│   ├── RoadLines.mat                # Road line markings material
+│   ├── uploads_files_*.fbx          # Road/track 3D model
+│   └── Volkswagen.fbx               # Car 3D model
+├── Logs/                            # Unity generated log files (gitignored)
+├── Packages/                        # Unity Package Manager files
+│   ├── manifest.json
+│   └── packages-lock.json
+├── UserSettings/                    # User-specific settings (gitignored)
+│   └── Search.settings
+├── .gitignore                       # Git ignore file
+├── Assembly-CSharp.csproj           # C# project file (auto-generated)
+├── README.md                        # Project documentation
+└── VRCarSimulator.sln               # Visual Studio solution file
 ```
+
+### Key Files Description:
+- **ManualSteeringAvoidance.cs**: Main game logic with obstacle avoidance
+- **CameraFollow.cs**: Third-person camera system
+- **engine-47745.mp3**: Engine sound with dynamic pitch modulation
+- **SampleScene.unity**: Complete game scene with waypoints and obstacles
+- **uploads_files_*.fbx**: Road model with asphalt texture and lane markings
+- **Volkswagen.fbx**: Red and white car model
+- **Material files**: Custom materials for road, obstacles, and visual elements
 
 ## Setup Instructions
 
